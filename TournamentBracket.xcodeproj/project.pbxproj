@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075226A620F2AD590003B88C /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075226A520F2AD590003B88C /* FinalViewController.swift */; };
 		07942F9620EFEA0F0055C405 /* BracketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07942F9520EFEA0F0055C405 /* BracketsViewController.swift */; };
 		07A3AB7720EC52120073F893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A3AB7620EC52120073F893 /* AppDelegate.swift */; };
 		07A3AB7920EC52120073F893 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A3AB7820EC52120073F893 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		075226A520F2AD590003B88C /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		07942F9520EFEA0F0055C405 /* BracketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracketsViewController.swift; sourceTree = "<group>"; };
 		07A3AB7320EC52120073F893 /* TournamentBracket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TournamentBracket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A3AB7620EC52120073F893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				07A3AB7620EC52120073F893 /* AppDelegate.swift */,
 				07A3AB7820EC52120073F893 /* ViewController.swift */,
 				07A3AB7A20EC52120073F893 /* Main.storyboard */,
+				075226A520F2AD590003B88C /* FinalViewController.swift */,
 				07942F9520EFEA0F0055C405 /* BracketsViewController.swift */,
 				07A3AB7D20EC52130073F893 /* Assets.xcassets */,
 				07A3AB7F20EC52130073F893 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A3AB7920EC52120073F893 /* ViewController.swift in Sources */,
+				075226A620F2AD590003B88C /* FinalViewController.swift in Sources */,
 				07A3AB7720EC52120073F893 /* AppDelegate.swift in Sources */,
 				07942F9620EFEA0F0055C405 /* BracketsViewController.swift in Sources */,
 			);

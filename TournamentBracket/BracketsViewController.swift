@@ -27,16 +27,17 @@ class BracketsViewController: UIViewController {
     
     //--------Funcs--------------
     override func viewDidLoad() {
-        
         firstMatches = [player1L, player2L, player3L, player4L]
         stillInTheGame = firstMatches
         let labels = [player1L, player2L, player3L, player4L, Splayer1L, Splayer2L]
         for label in labels{
             label?.text = ""
         }
-        
         for i in 0..<players.count{
             firstMatches[i].text = players[i]
+        }
+        if firstMatches[firstMatches.count-1].text == ""{
+            
         }
         startTournament()
         super.viewDidLoad()
