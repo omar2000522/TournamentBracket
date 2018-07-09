@@ -1,22 +1,24 @@
 //
-//  BracketsViewController.swift
+//  Top8ViewController.swift
 //  TournamentBracket
 //
-//  Created by Omar on 22/10/1439 AH.
+//  Created by Omar on 24/10/1439 AH.
 //  Copyright © 1439 Omar. All rights reserved.
 //
 
 import UIKit
 
-class BracketsViewController: UIViewController {
+class Top8ViewController: UIViewController {
     //--------Outlets------------
     @IBOutlet weak var player1L: UILabel!
     @IBOutlet weak var player2L: UILabel!
     @IBOutlet weak var player3L: UILabel!
     @IBOutlet weak var player4L: UILabel!
-    @IBOutlet weak var Splayer1L: UILabel!
-    @IBOutlet weak var Splayer2L: UILabel!
-    @IBOutlet weak var winnerL: UILabel!
+    @IBOutlet weak var player5L: UILabel!
+    @IBOutlet weak var player6L: UILabel!
+    @IBOutlet weak var player7L: UILabel!
+    @IBOutlet weak var player8L: UILabel!
+    
     
     //--------Variables----------
     var players = [String]()
@@ -27,7 +29,7 @@ class BracketsViewController: UIViewController {
     
     //--------Funcs--------------
     override func viewDidLoad() {
-        firstMatches = [player1L, player2L, player3L, player4L]
+        firstMatches = [player1L, player2L, player3L, player4L, player5L, player6L, player7L, player8L]
         stillInTheGame = firstMatches
         
         //clears the label names
@@ -35,7 +37,6 @@ class BracketsViewController: UIViewController {
         for label in labels{
             label.text = ""
         }
-        
         //assigns each player name to a label
         for i in 0..<players.count{
             firstMatches[i].text = players[i]
@@ -48,8 +49,9 @@ class BracketsViewController: UIViewController {
         }
         updateBracket()
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func onTappedLabel(_ sender: UITapGestureRecognizer) {
         for label in firstMatches{
             
@@ -98,12 +100,12 @@ class BracketsViewController: UIViewController {
         }
         
         if winners.count+losers.count+1 >= firstMatches.count{
-            performSegue(withIdentifier: "segue1v1", sender: self)
+            performSegue(withIdentifier: "segue8P4P", sender: self)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dataTunnel = segue.destination as! FinalViewController
+        let dataTunnel = segue.destination as! BracketsViewController
         dataTunnel.players = winners
     }
     override func didReceiveMemoryWarning() {

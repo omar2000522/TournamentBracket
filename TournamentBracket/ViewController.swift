@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     //------------Variables------------
     var players = [String]()
     var playerLabels = [UILabel]()
     var canAdvance = false
+    
     
     //------------Outlet Parking-------
     @IBOutlet weak var PlayerEntryTextField: UITextField!
@@ -64,7 +66,12 @@ class ViewController: UIViewController {
     
     @IBAction func advanceButton(_ sender: Any) {
         if canAdvance{
-            performSegue(withIdentifier: "segue1", sender: self)
+            if players.count <= 4{
+            performSegue(withIdentifier: "segue4P", sender: self)
+            }
+            else if players.count <= 8{
+                performSegue(withIdentifier: "segue8P", sender: self)
+            }
         }
     }
     
@@ -83,8 +90,15 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue4P"{
         let dataTunnel = segue.destination as! BracketsViewController
         dataTunnel.players = players
+        }
+        
+        if segue.identifier == "segue8P"{
+            let dataTunnel = segue.destination as! Top8ViewController
+            dataTunnel.players = players
+        }
     }
     
     override func didReceiveMemoryWarning() {

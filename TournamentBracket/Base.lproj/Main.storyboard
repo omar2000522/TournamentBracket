@@ -236,7 +236,9 @@
                         <outlet property="player7" destination="AY7-Uj-Fym" id="MX8-el-6ph"/>
                         <outlet property="player8" destination="PEd-ux-WOd" id="H23-Yh-FsB"/>
                         <outlet property="player9" destination="h0I-qY-sjn" id="rw5-Ym-bPf"/>
-                        <segue destination="i2B-fy-ZSY" kind="show" identifier="segue1" id="Yik-Q9-z6f"/>
+                        <segue destination="i2B-fy-ZSY" kind="show" identifier="segue4P" id="Yik-Q9-z6f"/>
+                        <segue destination="AKe-Uu-J4z" kind="show" identifier="segue2P" id="vbl-MC-Qbd"/>
+                        <segue destination="6U4-xs-3f5" kind="show" identifier="segue8P" id="jyv-1g-98H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -344,6 +346,126 @@
             </objects>
             <point key="canvasLocation" x="1230" y="-643"/>
         </scene>
+        <!--Top8 View Controller-->
+        <scene sceneID="Mbc-tC-CZP">
+            <objects>
+                <viewController id="6U4-xs-3f5" customClass="Top8ViewController" customModule="TournamentBracket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KDX-ed-jVN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsK-Xv-9Lm">
+                                <rect key="frame" x="80" y="90" width="62" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hi-WX-SPl">
+                                <rect key="frame" x="232" y="90" width="62" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7w6-fh-hXI">
+                                <rect key="frame" x="80" y="223" width="62" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biY-Gb-nvT">
+                                <rect key="frame" x="231" y="223" width="62" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="VS" translatesAutoresizingMaskIntoConstraints="NO" id="saz-eP-hIn">
+                                <rect key="frame" x="162" y="80" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="VS" translatesAutoresizingMaskIntoConstraints="NO" id="Piy-dN-qaJ">
+                                <rect key="frame" x="162" y="215" width="50" height="50"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-m7-f28">
+                                <rect key="frame" x="81" y="356" width="62" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26U-e5-jhT">
+                                <rect key="frame" x="233" y="356" width="62" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6t-ad-W6P">
+                                <rect key="frame" x="81" y="494" width="62" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vF-77-Bx2">
+                                <rect key="frame" x="233" y="494" width="62" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="VS" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-Dp-Bf9">
+                                <rect key="frame" x="163" y="350" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="VS" translatesAutoresizingMaskIntoConstraints="NO" id="Hcu-HG-KqN">
+                                <rect key="frame" x="163" y="485" width="50" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70860980309999999" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="7w6-fh-hXI" firstAttribute="top" secondItem="ZsK-Xv-9Lm" secondAttribute="bottom" constant="100" id="1LQ-8g-mfx"/>
+                            <constraint firstItem="pzn-Dp-Bf9" firstAttribute="leading" secondItem="Cyt-m7-f28" secondAttribute="trailing" constant="20" id="5mj-F9-0Yz"/>
+                            <constraint firstItem="26U-e5-jhT" firstAttribute="top" secondItem="biY-Gb-nvT" secondAttribute="bottom" constant="100" id="6ND-Oz-yLh"/>
+                            <constraint firstItem="pzn-Dp-Bf9" firstAttribute="top" secondItem="Piy-dN-qaJ" secondAttribute="bottom" constant="85" id="7qW-Va-6Rq"/>
+                            <constraint firstItem="Piy-dN-qaJ" firstAttribute="centerX" secondItem="KDX-ed-jVN" secondAttribute="centerX" id="ADg-Kg-21O"/>
+                            <constraint firstItem="5vF-77-Bx2" firstAttribute="leading" secondItem="Hcu-HG-KqN" secondAttribute="trailing" constant="20" id="BIp-kf-7Hj"/>
+                            <constraint firstItem="saz-eP-hIn" firstAttribute="leading" secondItem="ZsK-Xv-9Lm" secondAttribute="trailing" constant="20" id="BOj-ac-FJS"/>
+                            <constraint firstItem="Hcu-HG-KqN" firstAttribute="centerX" secondItem="KDX-ed-jVN" secondAttribute="centerX" id="EfE-aV-egB"/>
+                            <constraint firstItem="Hcu-HG-KqN" firstAttribute="top" secondItem="pzn-Dp-Bf9" secondAttribute="bottom" constant="85" id="I03-tP-vtp"/>
+                            <constraint firstItem="biY-Gb-nvT" firstAttribute="leading" secondItem="Piy-dN-qaJ" secondAttribute="trailing" constant="20" id="IlQ-Ae-xIj"/>
+                            <constraint firstItem="Hcu-HG-KqN" firstAttribute="leading" secondItem="A6t-ad-W6P" secondAttribute="trailing" constant="20" id="O7l-3P-thT"/>
+                            <constraint firstItem="pzn-Dp-Bf9" firstAttribute="centerX" secondItem="KDX-ed-jVN" secondAttribute="centerX" id="QWi-Qa-MxN"/>
+                            <constraint firstItem="A6t-ad-W6P" firstAttribute="top" secondItem="Cyt-m7-f28" secondAttribute="bottom" constant="100" id="TYr-iz-M5H"/>
+                            <constraint firstItem="5vF-77-Bx2" firstAttribute="top" secondItem="26U-e5-jhT" secondAttribute="bottom" constant="100" id="Xqh-Jh-3Xh"/>
+                            <constraint firstItem="26U-e5-jhT" firstAttribute="leading" secondItem="pzn-Dp-Bf9" secondAttribute="trailing" constant="20" id="Z0G-1Y-qPK"/>
+                            <constraint firstItem="Cyt-m7-f28" firstAttribute="top" secondItem="7w6-fh-hXI" secondAttribute="bottom" constant="100" id="cIi-bU-XpC"/>
+                            <constraint firstItem="saz-eP-hIn" firstAttribute="centerX" secondItem="KDX-ed-jVN" secondAttribute="centerX" id="eaG-je-BlL"/>
+                            <constraint firstItem="Piy-dN-qaJ" firstAttribute="top" secondItem="saz-eP-hIn" secondAttribute="bottom" constant="85" id="jER-Xd-32x"/>
+                            <constraint firstItem="biY-Gb-nvT" firstAttribute="top" secondItem="8Hi-WX-SPl" secondAttribute="bottom" constant="100" id="jtf-gP-oYX"/>
+                            <constraint firstItem="Piy-dN-qaJ" firstAttribute="leading" secondItem="7w6-fh-hXI" secondAttribute="trailing" constant="20" id="tqE-Y3-O6g"/>
+                            <constraint firstItem="8Hi-WX-SPl" firstAttribute="leading" secondItem="saz-eP-hIn" secondAttribute="trailing" constant="20" id="vyr-y8-247"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5g9-X7-jvx"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="MEg-yP-77I" appends="YES" id="yJH-af-F0u"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="player1L" destination="ZsK-Xv-9Lm" id="4xU-Mt-M66"/>
+                        <outlet property="player2L" destination="8Hi-WX-SPl" id="RCk-KY-E9W"/>
+                        <outlet property="player3L" destination="7w6-fh-hXI" id="wDP-WY-4We"/>
+                        <outlet property="player4L" destination="biY-Gb-nvT" id="0id-s4-HSZ"/>
+                        <outlet property="player5L" destination="Cyt-m7-f28" id="A8x-bR-bzm"/>
+                        <outlet property="player6L" destination="26U-e5-jhT" id="VxK-Za-zsd"/>
+                        <outlet property="player7L" destination="A6t-ad-W6P" id="9pn-PC-GgC"/>
+                        <outlet property="player8L" destination="5vF-77-Bx2" id="Ze4-Ew-Vxg"/>
+                        <segue destination="i2B-fy-ZSY" kind="show" identifier="segue8P4P" id="gur-S5-Vkc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqy-xe-XAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MEg-yP-77I">
+                    <connections>
+                        <action selector="onTappedLabel:" destination="6U4-xs-3f5" id="qmz-L8-gpe"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1164" y="611"/>
+        </scene>
         <!--Final View Controller-->
         <scene sceneID="kCP-PZ-cfJ">
             <objects>
@@ -386,4 +508,8 @@
         <image name="WhitePicWBorder" width="2000" height="2000"/>
         <image name="gradient4" width="640" height="1136"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vbl-MC-Qbd"/>
+        <segue reference="gur-S5-Vkc"/>
+    </inferredMetricsTieBreakers>
 </document>
