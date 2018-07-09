@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		075226A620F2AD590003B88C /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075226A520F2AD590003B88C /* FinalViewController.swift */; };
 		075226A820F2CDD50003B88C /* Top8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075226A720F2CDD50003B88C /* Top8ViewController.swift */; };
+		075226AA20F2E8A40003B88C /* WinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075226A920F2E8A40003B88C /* WinnerViewController.swift */; };
+		075226AC20F2EC950003B88C /* tourneyTheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 075226AB20F2EC950003B88C /* tourneyTheme.mp3 */; };
 		07942F9620EFEA0F0055C405 /* BracketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07942F9520EFEA0F0055C405 /* BracketsViewController.swift */; };
 		07A3AB7720EC52120073F893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A3AB7620EC52120073F893 /* AppDelegate.swift */; };
 		07A3AB7920EC52120073F893 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A3AB7820EC52120073F893 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		075226A520F2AD590003B88C /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		075226A720F2CDD50003B88C /* Top8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top8ViewController.swift; sourceTree = "<group>"; };
+		075226A920F2E8A40003B88C /* WinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerViewController.swift; sourceTree = "<group>"; };
+		075226AB20F2EC950003B88C /* tourneyTheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tourneyTheme.mp3; path = ../../../../Downloads/tourneyTheme.mp3; sourceTree = "<group>"; };
 		07942F9520EFEA0F0055C405 /* BracketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracketsViewController.swift; sourceTree = "<group>"; };
 		07A3AB7320EC52120073F893 /* TournamentBracket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TournamentBracket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A3AB7620EC52120073F893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +67,11 @@
 				07A3AB7620EC52120073F893 /* AppDelegate.swift */,
 				07A3AB7820EC52120073F893 /* ViewController.swift */,
 				07A3AB7A20EC52120073F893 /* Main.storyboard */,
+				075226A920F2E8A40003B88C /* WinnerViewController.swift */,
 				075226A720F2CDD50003B88C /* Top8ViewController.swift */,
 				075226A520F2AD590003B88C /* FinalViewController.swift */,
 				07942F9520EFEA0F0055C405 /* BracketsViewController.swift */,
+				075226AB20F2EC950003B88C /* tourneyTheme.mp3 */,
 				07A3AB7D20EC52130073F893 /* Assets.xcassets */,
 				07A3AB7F20EC52130073F893 /* LaunchScreen.storyboard */,
 				07A3AB8220EC52130073F893 /* Info.plist */,
@@ -134,6 +140,7 @@
 				07A3AB8120EC52130073F893 /* LaunchScreen.storyboard in Resources */,
 				07A3AB7E20EC52130073F893 /* Assets.xcassets in Resources */,
 				07A3AB7C20EC52120073F893 /* Main.storyboard in Resources */,
+				075226AC20F2EC950003B88C /* tourneyTheme.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +156,7 @@
 				07A3AB7720EC52120073F893 /* AppDelegate.swift in Sources */,
 				075226A820F2CDD50003B88C /* Top8ViewController.swift in Sources */,
 				07942F9620EFEA0F0055C405 /* BracketsViewController.swift in Sources */,
+				075226AA20F2E8A40003B88C /* WinnerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,10 +42,30 @@ class Top8ViewController: UIViewController {
             firstMatches[i].text = players[i]
         }
         //checks if the last player has an apponent if not then he's automatically a winner
-        if firstMatches[firstMatches.count-1].text == ""{
-            firstMatches[firstMatches.count-1].text = "N/A"
-            stillInTheGame.remove(at: firstMatches.count-1)
-            winners.append(firstMatches[firstMatches.count-2].text!)
+//        if firstMatches[firstMatches.count-1].text == ""{
+//            firstMatches[firstMatches.count-1].text = "N/A"
+//            stillInTheGame.remove(at: firstMatches.count-1)
+//            winners.append(firstMatches[firstMatches.count-2].text!)
+//        }
+        for spot in 0...firstMatches.count-1{
+            if firstMatches[spot].text == "" {
+                if spot%2 == 0{
+                    if firstMatches[spot+1].text == ""{
+                        losers.append(firstMatches[spot].text!)
+                        losers.append(firstMatches[spot+1].text!)
+                        firstMatches[spot].text = "N/A"
+                        firstMatches[spot+1].text = "N/A"
+                    }
+                }
+                if spot%2 == 1{
+                    if firstMatches[spot-1].text != ""{
+                        winners.append(firstMatches[spot-1].text!)
+                        losers.append(firstMatches[spot].text!)
+                        firstMatches[spot].text = "N/A"
+                        
+                    }
+                }
+            }
         }
         updateBracket()
         super.viewDidLoad()
@@ -56,7 +76,7 @@ class Top8ViewController: UIViewController {
         for label in firstMatches{
             
             if label.frame.contains(sender.location(in: view)){
-                if stillInTheGame.contains(label) && !winners.contains(label.text!) && !losers.contains(label.text!){
+                if stillInTheGame.contains(label) && !winners.contains(label.text!) && !losers.contains(label.text!) && label.text != "N/A"{
                     // if the winner label is at an even index it means that the odd index has the loser and vice versa
                     if players.index(of: label.text!)! % 2 == 0{
                         let indexOfWinner = players.index(of: label.text!)!

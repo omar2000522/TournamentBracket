@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var players = [String]()
     var playerLabels = [UILabel]()
     var canAdvance = false
-    
+    var themePlayer = AVAudioPlayer()
     
     //------------Outlet Parking-------
     @IBOutlet weak var PlayerEntryTextField: UITextField!
@@ -26,8 +26,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var player5: UILabel!
     @IBOutlet weak var player6: UILabel!
     @IBOutlet weak var player7: UILabel!
-    @IBOutlet weak var player8: UILabel!
-    @IBOutlet weak var player9: UILabel!
     @IBOutlet weak var advanceBut: UIButton!
     
     
@@ -36,7 +34,7 @@ class ViewController: UIViewController {
     @IBAction func addButton(_ sender: Any) {
         
         // Enters player in the players' array
-        if PlayerEntryTextField.text != "" && !(players.contains(PlayerEntryTextField.text!)){
+        if PlayerEntryTextField.text != "" && !(players.contains(PlayerEntryTextField.text!)) && players.count < 8 {
             players.append(PlayerEntryTextField.text!)
             PlayerEntryTextField.text = ""
             updateLabels()
@@ -60,14 +58,16 @@ class ViewController: UIViewController {
             if i < playerLabels.count{
             playerLabels[i].text = players[i]
             }
-            else{ playerLabels[playerLabels.count - 1].text = "..." }
         }
     }
     
     @IBAction func advanceButton(_ sender: Any) {
         if canAdvance{
-            if players.count <= 4{
-            performSegue(withIdentifier: "segue4P", sender: self)
+            if players.count == 2{
+                performSegue(withIdentifier: "segue2P", sender: self)
+            }
+            else if players.count <= 4{
+                performSegue(withIdentifier: "segue4P", sender: self)
             }
             else if players.count <= 8{
                 performSegue(withIdentifier: "segue8P", sender: self)
@@ -76,7 +76,14 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        playerLabels = [player0,player1,player2,player3,player4,player5,player6,player7,player8,player9]
+        //plays the theme
+        do{
+            let themePath = Bundle.main.path(forResource: "tourneyTheme", ofType: "mp3")
+            try themePlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: themePath!) as URL)
+            themePlayer.play()
+        }
+        catch{print(error)}
+        playerLabels = [player0,player1,player2,player3,player4,player5,player6,player7]
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -90,9 +97,13 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue2P"{
+            let dataTunnel = segue.destination as! FinalViewController
+            dataTunnel.players = players
+        }
         if segue.identifier == "segue4P"{
-        let dataTunnel = segue.destination as! BracketsViewController
-        dataTunnel.players = players
+            let dataTunnel = segue.destination as! BracketsViewController
+            dataTunnel.players = players
         }
         
         if segue.identifier == "segue8P"{

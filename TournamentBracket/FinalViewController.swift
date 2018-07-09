@@ -12,6 +12,7 @@ class FinalViewController: UIViewController {
     //--------VARIABLES------------
     var players = [String]()
     var playerLabels = [UILabel]()
+    var tourneyWinner = String()
     
     //--------OUTLETS--------------
     @IBOutlet weak var player1L: UILabel!
@@ -19,15 +20,31 @@ class FinalViewController: UIViewController {
     
     
     //--------FUNCS----------------
+    @IBAction func onTappedLabel(_ sender: UITapGestureRecognizer) {
+        for label in playerLabels{
+            if label.frame.contains(sender.location(in: view)){
+                tourneyWinner = label.text!
+                performSegue(withIdentifier: "winner", sender: self)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         playerLabels = [player1L, player2L]
         super.viewDidLoad()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         for i in 0...players.count-1{
             playerLabels[i].text = players[i]
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dataTunnel = segue.destination as! WinnerViewController
+        dataTunnel.winner = tourneyWinner
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
